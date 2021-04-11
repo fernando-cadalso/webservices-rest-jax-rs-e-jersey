@@ -76,5 +76,12 @@ public class Carrinho {
 	public List<Produto> getProdutos() {
 		return produtos;
 	}
+	/*
+	 * Método que retorna uma string no formato XML
+	 * para o metódo que a chamou.
+	 */
+	public String toXML() {
+		return new XStream().toXML(this);
+	}
 
 }
