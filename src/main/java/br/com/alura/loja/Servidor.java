@@ -11,6 +11,16 @@ public class Servidor {
 
 	public static void main(String[] args) throws IOException {
 
+		HttpServer server = inicializaServidor();
+		/*
+		 * Códigos para validação apenas.
+		 */
+		System.out.println("Servidor rodando...");
+		System.in.read();
+		server.stop();
+	}
+
+	public static HttpServer inicializaServidor() {
 		/*
 		 * Cria uma URI para host ou domínio onde o servidor vai responder
 		 * às requisições.
@@ -25,12 +35,7 @@ public class Servidor {
 		 *Cria um servidor HTTP usando uma fábrica de servidor HTTP.
 		 */
 		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(uri, config);
-		/*
-		 * Códigos para validação apenas.
-		 */
-		System.out.println("Servidor rodando...");
-		System.in.read();
-		server.stop();
+		return server;
 	}
 
 }

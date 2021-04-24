@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.thoughtworks.xstream.XStream;
-
 import br.com.alura.loja.modelo.Carrinho;
 import br.com.alura.loja.modelo.Produto;
 
@@ -20,7 +18,7 @@ public class CarrinhoDAO {
 		Carrinho carrinho = new Carrinho()
 								.adiciona(videogame)
 								.adiciona(esporte)
-								.para("Rua Vergueiro 3185, 8 andar", "S�o Paulo")
+								.para("Rua Vergueiro 3185, 8 andar", "São Paulo")
 								.setId(1l);
 		banco.put(1l, carrinho);
 	}
